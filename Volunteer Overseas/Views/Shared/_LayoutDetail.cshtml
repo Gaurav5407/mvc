@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="~/Images/favicon.ico" />
+    <link href="~/admin_panel/css/main.css" rel="stylesheet" />
+    <script src="~/Scripts/main.js"></script>
+</head>
+<body>
+    @*<div class="container-fluid shadow-sm">
+            <nav class="navbar navbar-expand-lg">
+                <img src="~/Images/logo.png" class="banner-logo" />
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars fa-black"></i>
+                </button>
+
+                <div class="navbar-collapse collapse header-link" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto navbar-ul">
+                        <li class="nav-item pr-5">
+                            <a class="nav-link text-uppercase" href="#">Organization</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link text-uppercase" href="#">projects</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link text-uppercase" href="#">users</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link text-uppercase" href="#">categories</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link text-uppercase" href="#">activities</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link text-uppercase" href="#">faq</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link text-uppercase" href="#">applications</a>
+                        </li>
+                        <li class="nav-item pr-5">
+                            <a class="nav-link text-uppercase" href="#">contact inquries</a>
+                        </li>
+                    </ul>
+                    <div class="mr-5">
+                        <div>gaurav.rangapariya@internal.mail</div>
+                        <div>Currently loggin as : Organization</div>
+                    </div>
+                    <form class="form-inline my-2 my-lg-0">
+                        <button class="btn my-2 my-sm-0 btn-login">Logout</button>
+                    </form>
+                </div>
+            </nav>
+
+        </div>*@
+    <div class="wrapper admin-wrapper admin-login">
+        <header>
+            <div class="row header-row">
+                <div class="col-lg-2 col-sm-3 col-xs-6 logo-outer">
+
+                    <a href="index.html" title="Volunteer Overseas" class="logo"><img src="../Images/logo_1.png" alt=""><img class="color-logo" src="../Images/logo.png" alt=""></a>
+                </div>
+                <div class="col-lg-10 col-sm-9 col-xs-6 menu-wrap">
+                    <nav>
+                        <ul>
+                            <li><a href=@Url.Action("Organization","Admin") title="Organization">Organization</a></li>
+                            <li><a href="#" title="Projects">Projects</a></li>
+                            <li><a href="#" title="Application">users</a></li>
+                            <li><a href=@Url.Action("Category","Admin") title="Category">categories</a></li>
+                            <li><a href="#" title="FAQ">activities</a></li>
+                            <li><a href="#" title="FAQ">faq</a></li>
+                            <li><a href="#" title="FAQ">applications</a></li>
+                            <li><a href="#" title="FAQ">contact inquries</a></li>
+                            <li class="mr-5">
+                                <div>gaurav.rangapariya@internal.mail</div>
+                                <div>Currently loggin as : Organization</div>
+                            </li>
+                            <li class="right-block">
+                                <a href=@Url.Action("login","Admin") class="btn" title="Login">Logout</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+            <a href="#" title="" class="hamburger-icon"><span></span></a>
+        </header>
+        @RenderBody()
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DDBB03C-BAE8-4CC5-8CCE-072D88145200}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Volunteer_Overseas</RootNamespace>
+    <AssemblyName>Volunteer Overseas</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Class\CategoryDataOperation.cs" />
+    <Compile Include="Class\ContactDataOperation.cs" />
+    <Compile Include="Class\OrganizationDataOperation.cs" />
+    <Compile Include="Class\ProjectDataOperation.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Activity.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Application.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\City.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Country.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\csp_getLocatons_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\csp_getTypes_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FAQ.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inquiry.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Organization.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project_Carousel_Image.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project_Cost.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project_Include_Check.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project_Start_Date.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project_View_History.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SplitString_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getActivities_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getAllApplications_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getAllHomePageData_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getAllImagesOfProject_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getAllOrganizations_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getAllProjects_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getCountriesWithProjectCount_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getFAQs_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getOrganizationsDetails_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getProjectsBasedOnCost_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\usp_getTrendingProjects_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\u_getInquiryDetail_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\u_getProjectDetails_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\u_getProjectsByFilter_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\u_validateUser_Result.cs">
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VolunteerOverseas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VolunteerOverseas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VolunteerOverseas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VolunteerOverseas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VolunteerOverseas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VolunteerOverseas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CustomCategory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin_panel\css\bootstrap-theme.min.css" />
+    <Content Include="admin_panel\css\bootstrap.min.css" />
+    <Content Include="admin_panel\css\dropkick.css" />
+    <Content Include="admin_panel\css\jquery-ui.min.css" />
+    <Content Include="admin_panel\css\main.css" />
+    <Content Include="admin_panel\css\media.css" />
+    <Content Include="admin_panel\css\nouislider.min.css" />
+    <Content Include="admin_panel\css\owl.carousel.min.css" />
+    <Content Include="admin_panel\css\reset.css" />
+    <Content Include="admin_panel\css\select2.min.css" />
+    <Content Include="admin_panel\css\style.css" />
+    <Content Include="admin_panel\css\swiper.min.css" />
+    <Content Include="admin_panel\images\banner-img.jpg" />
+    <Content Include="admin_panel\images\down-arrow-black.svg" />
+    <Content Include="admin_panel\images\logo.png" />
+    <Content Include="admin_panel\images\logo_1.png" />
+    <Content Include="admin_panel\js\bootstrap.min.js" />
+    <Content Include="admin_panel\js\css3-animate-it.js" />
+    <Content Include="admin_panel\js\dropkick.min.js" />
+    <Content Include="admin_panel\js\fastclick.min.js" />
+    <Content Include="admin_panel\js\general.js" />
+    <Content Include="admin_panel\js\imagesloaded.pkgd.min.js" />
+    <Content Include="admin_panel\js\jquery-imagefill-min.js" />
+    <Content Include="admin_panel\js\jquery-ui.min.js" />
+    <Content Include="admin_panel\js\jquery.js" />
+    <Content Include="admin_panel\js\jquery.sticky.js" />
+    <Content Include="admin_panel\js\jquery.waypoints.min.js" />
+    <Content Include="admin_panel\js\lightbox-plus-jquery.min.js" />
+    <Content Include="admin_panel\js\lightbox.min.js" />
+    <Content Include="admin_panel\js\main.js" />
+    <Content Include="admin_panel\js\modernizr.js" />
+    <Content Include="admin_panel\js\nouislider.min.js" />
+    <Content Include="admin_panel\js\owl.carousel.min.js" />
+    <Content Include="admin_panel\js\owl.carousel2.thumbs.min.js" />
+    <Content Include="admin_panel\js\respond.min.js" />
+    <Content Include="admin_panel\js\select2.min.js" />
+    <Content Include="admin_panel\js\swiper.jquery.min.js" />
+    <Content Include="admin_panel\js\wNumb.js" />
+    <Content Include="admin_panel\js\_old_general.js" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Contact.css" />
+    <Content Include="Content\dropkick.css" />
+    <Content Include="Content\Faq.css" />
+    <Content Include="Content\header.css" />
+    <Content Include="Content\Home.css" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\nouislider.min.css" />
+    <Content Include="Content\Organization.css" />
+    <Content Include="Content\owl.carousel.min.css" />
+    <Content Include="Content\owl.theme.default.min.css" />
+    <Content Include="Content\Index.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Search.css" />
+    <Content Include="Content\swiper.min.css" />
+    <Content Include="Content\Work.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\angle-left-arrow.svg" />
+    <Content Include="Images\angle-right-arrow.svg" />
+    <Content Include="Images\area-check.svg" />
+    <Content Include="Images\arrow-large.svg" />
+    <Content Include="Images\arrow-toggle.png" />
+    <Content Include="Images\banner-img.jpg" />
+    <Content Include="Images\banner2.jpg" />
+    <Content Include="Images\banner3.jpg" />
+    <Content Include="Images\banner4.jpg" />
+    <Content Include="Images\banner5.jpg" />
+    <Content Include="Images\bg.png" />
+    <Content Include="Images\bimap-02.jpg" />
+    <Content Include="Images\bluemap-pin.png" />
+    <Content Include="Images\calendar-green.png" />
+    <Content Include="Images\check.png" />
+    <Content Include="Images\check.svg" />
+    <Content Include="Images\close-black.svg" />
+    <Content Include="Images\close.svg" />
+    <Content Include="Images\contact-banner-mobile.jpg" />
+    <Content Include="Images\contact-banner.jpg" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\down-arrow-black.svg" />
+    <Content Include="Images\down-arrow-grey.svg" />
+    <Content Include="Images\down-arrow-mobile.svg" />
+    <Content Include="Images\down-arrow-orange.svg" />
+    <Content Include="Images\down-arrow.svg" />
+    <Content Include="Images\edit-icon.png" />
+    <Content Include="Images\edit-icon.svg" />
+    <Content Include="Images\faq-banner.jpg" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\gallery-banner1.png" />
+    <Content Include="Images\gallery-thumb1.jpg" />
+    <Content Include="Images\gallery-thumb2.jpg" />
+    <Content Include="Images\gallery-thumb3.jpg" />
+    <Content Include="Images\gallery-thumb4.jpg" />
+    <Content Include="Images\ico4.png" />
+    <Content Include="Images\ico5.png" />
+    <Content Include="Images\icon1.png" />
+    <Content Include="Images\icon2.png" />
+    <Content Include="Images\icon3.png" />
+    <Content Include="Images\icon4.png" />
+    <Content Include="Images\left-arrow-big.png" />
+    <Content Include="Images\left-arrow.svg" />
+    <Content Include="Images\left-white-arrow.png" />
+    <Content Include="Images\light-blue-pin.png" />
+    <Content Include="Images\line1.png" />
+    <Content Include="Images\line2.png" />
+    <Content Include="Images\line3.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo_1.png" />
+    <Content Include="Images\map-blue.png" />
+    <Content Include="Images\map-pin.png" />
+    <Content Include="Images\map-placeholder.jpg" />
+    <Content Include="Images\map.png" />
+    <Content Include="Images\menu.svg" />
+    <Content Include="Images\modal-banner.png" />
+    <Content Include="Images\new-tick.png" />
+    <Content Include="Images\next-arrow.svg" />
+    <Content Include="Images\non-check.png" />
+    <Content Include="Images\orange-calander-icon.png" />
+    <Content Include="Images\photo01.jpg" />
+    <Content Include="Images\photo02.jpg" />
+    <Content Include="Images\photo03.jpg" />
+    <Content Include="Images\photo04.jpg" />
+    <Content Include="Images\photo05.jpg" />
+    <Content Include="Images\photo06.jpg" />
+    <Content Include="Images\photo07.jpg" />
+    <Content Include="Images\photos-icon.png" />
+    <Content Include="Images\pin.png" />
+    <Content Include="Images\plane-ico.png" />
+    <Content Include="Images\play-ico.svg" />
+    <Content Include="Images\play-logo.png" />
+    <Content Include="Images\right-arrow-big.png" />
+    <Content Include="Images\right-arrow.svg" />
+    <Content Include="Images\right-orange-arrow.png" />
+    <Content Include="Images\right-orange-arrow.svg" />
+    <Content Include="Images\right-white-arrow.png" />
+    <Content Include="Images\search-ic.svg" />
+    <Content Include="Images\search.svg" />
+    <Content Include="Images\select_menu_arrows.svg" />
+    <Content Include="Images\thumb01.jpg" />
+    <Content Include="Images\thumb02.jpg" />
+    <Content Include="Images\thumb03.jpg" />
+    <Content Include="Images\thumb04.jpg" />
+    <Content Include="Images\thumb05.jpg" />
+    <Content Include="Images\thumb06.jpg" />
+    <Content Include="Images\thumb07.jpg" />
+    <Content Include="Images\thumb08.jpg" />
+    <Content Include="Images\thumb09.jpg" />
+    <Content Include="Images\thumb10.jpg" />
+    <Content Include="Images\thumb11.jpg" />
+    <Content Include="Images\thumb12.jpg" />
+    <Content Include="Images\thumb13.jpg" />
+    <Content Include="Images\thumb14.jpg" />
+    <Content Include="Images\thumb15.jpg" />
+    <Content Include="Images\thumb16.jpg" />
+    <Content Include="Images\thumb17.jpg" />
+    <Content Include="Images\thumb18.jpg" />
+    <Content Include="Images\thumb19.jpg" />
+    <Content Include="Images\thumb20.jpg" />
+    <Content Include="Images\thumb21.jpg" />
+    <Content Include="Images\thumb22.jpg" />
+    <Content Include="Images\thumb23.jpg" />
+    <Content Include="Images\thumb24.jpg" />
+    <Content Include="Images\thumb25.jpg" />
+    <Content Include="Images\thumb26.jpg" />
+    <Content Include="Images\thumb27.jpg" />
+    <Content Include="Images\thumb28.jpg" />
+    <Content Include="Images\top-2.svg" />
+    <Content Include="Images\ui-icons_444444_256x240.png" />
+    <Content Include="Images\ui-icons_555555_256x240.png" />
+    <Content Include="Images\ui-icons_777620_256x240.png" />
+    <Content Include="Images\ui-icons_777777_256x240.png" />
+    <Content Include="Images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Images\up-white-arrow.png" />
+    <Content Include="Images\video.mp4" />
+    <Content Include="Images\volunteer-logo01.png" />
+    <Content Include="Images\warning-red.svg" />
+    <Content Include="Images\warning.svg" />
+    <Content Include="Images\white-calander-icon.png" />
+    <Content Include="Images\works-thumb01-ipad.png" />
+    <Content Include="Images\works-thumb01-iphone.png" />
+    <Content Include="Images\works-thumb01.png" />
+    <Content Include="Images\works-thumb02.png" />
+    <Content Include="Images\works-thumb03-ipad.png" />
+    <Content Include="Images\works-thumb03.png" />
+    <Content Include="Images\works-thumb04.png" />
+    <Content Include="Models\VolunteerOverseas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VolunteerOverseas.edmx</DependentUpon>
+      <LastGenOutput>VolunteerOverseas.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\VolunteerOverseas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VolunteerOverseas.edmx</DependentUpon>
+      <LastGenOutput>VolunteerOverseas.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\VolunteerOverseas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VolunteerOverseas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\VolunteerOverseas.edmx.diagram">
+      <DependentUpon>VolunteerOverseas.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\dropkick.js" />
+    <Content Include="Scripts\Faq.js" />
+    <Content Include="Scripts\Header.js" />
+    <Content Include="Scripts\Home.js" />
+    <Content Include="Scripts\Index.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\nouislider.min.js" />
+    <Content Include="Scripts\owl.carousel.min.js" />
+    <Content Include="Scripts\Search.js" />
+    <Content Include="Scripts\swiper.min.js" />
+    <Content Include="Scripts\Validation.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Faq.cshtml" />
+    <Content Include="Views\User\Contact.cshtml" />
+    <Content Include="Views\User\Home.cshtml" />
+    <Content Include="Views\User\Search.cshtml" />
+    <Content Include="Views\User\Work.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Shared\_LayoutDetail.cshtml" />
+    <Content Include="Views\Admin\ProjectList.cshtml" />
+    <Content Include="Views\Categories\Category.cshtml" />
+    <Content Include="Views\Organization\Project.cshtml" />
+    <Content Include="Views\Admin\OrganizationList.cshtml" />
+    <Content Include="Views\Organization\Organization.cshtml" />
+    <Content Include="Views\Categories\EditCategory.cshtml" />
+    <Content Include="Views\Categories\DeleteCategory.cshtml" />
+    <Content Include="Views\Categories\Add.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61568</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61568/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

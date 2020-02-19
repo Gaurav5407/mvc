@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+
+<main>
+    <div class="container with-box-shadow">   
+        <form id="organization-detail">
+            <div class="row">
+                <div class="col-md-12">
+                    Add Organization
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="select-User" class="sub-header">Select User</label>
+
+                        <select class="custom-dropdown" id="select-User">
+                            <option>gaurav@gmail.com</option>
+                            <option>raj@gmail.com</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Organization Name" class="sub-header">Organization Name</label>
+                        <input type="text" class="form-control" id="Organization Name" placeholder="Organization Name" required />
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Organization Website" class="sub-header">Organization Website</label>
+                        <input type="text" class="form-control" placeholder="Enter Website" id="Organization Website" required />
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Organization Email" class="sub-header">Organization Email</label>
+                        <input type="text" class="form-control" id="Organization Email" required placeholder="Enter Email" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Contact Name" class="sub-header">Contact Name</label>
+                        <input type="text" class="form-control" id="Contact Name" required placeholder="Enter Contact Name" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="form-group">
+                        <label for="Organization description" class="sub-header">Organization description</label>
+
+                        <textarea rows="8" class="form-control" id="Organization description" placeholder="Textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Organization Image" class="sub-header">Organization Image</label>
+                        <input type="file" class="form-control" placeholder="Browse.." id="Organization Image" required />
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Organization Video" class="sub-header">Organization Video</label>
+                        <input type="file" class="form-control" id="Organization Video" required placeholder="Browse" />
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-fill" form="project-detail">Submit</button>
+                <button class="btn btn-fill" form="project-detail">Cancel</button>
+            </div>
+        </form>
+    </div>
+</main>
+

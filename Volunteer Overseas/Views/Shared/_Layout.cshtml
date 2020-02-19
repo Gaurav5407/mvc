@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Message</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="~/Content/header.css?ts=<?=time()?>" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/Content/dropkick.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Content/swiper.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="~/Scripts/Header.js"></script>
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+    <div class="container-fluid fixed-top header">
+        <nav class="navbar navbar-expand-lg navbar-expand-md header-navbar ml-md-4 mr-md-4 py-3">
+            <a href=@Url.Action("Home","User") class="logo-margin">
+                <img src="../Images/logo_1.png" class="banner-logo" />
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars fa-white"></i>
+            </button>
+
+            <div class="navbar-collapse collapse header-link" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto navbar-ul">
+                    <li class="nav-item pr-5">
+                        <a class="nav-link text-uppercase text-white" href=@Url.Action("Work","User")>how it works</a>
+                    </li>
+                    <li class="nav-item pr-5">
+                        <a class="nav-link text-uppercase text-white" href=@Url.Action("Contact","User")>contact us</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 login-form ">
+                    <a href=@Url.Action("Login","Admin") class="text-white nav-link"> Login</a>
+                </form>
+            </div>
+
+        </nav>
+    </div>
+    @RenderBody()
+    <footer class="footer">
+        <div class="container-fluid page-footer">
+            <div class="ml-md-4 mr-md-4 py-lg-4 py-4 text-center"><img src="../Images/logo_1.png" class="footer-logo" /></div>
+            <div class="footer-content py-md-4 py-sm-0">
+                <div>
+                    <a href=@Url.Action("Contact","User")>CONTACT US</a>
+                </div>
+                <div>
+                    <a href=@Url.Action("Faq","User")>FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

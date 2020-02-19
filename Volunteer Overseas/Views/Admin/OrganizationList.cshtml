@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model IEnumerable<Volunteer_Overseas.Models.usp_getAllOrganizations_Result>
+<main>
+    <section class="admin-section">
+        <div class="container">
+            <div class="with-box-shadow ">
+                <div class="section-title text-center">
+                    <h5>Organization list</h5>
+                    <div class="button-outer">
+                        <input type="button" class="btn btn-fill" value="Add Organization" onclick="location.href='@Url.Action("Organization", "Organization")'" />
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table admin-table table-bordered table-striped">
+
+                        <tr>
+                            <th>Organization name</th>
+                            <th>Email Id</th>
+                            <th></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.name)</td>
+                                <td>@Html.DisplayFor(modelItem => item.email_id)</td>
+                                <td>
+                                    <div class="button-outer">
+                                        <button type="button" class="btn btn-fill">Edit</button>
+                                        <button type="button" class="btn btn-fill">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+                <ul class="pagination">
+                    <li class="disabled">
+                        <a href="#" aria-label="Previous">
+                            <
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li class="">
+                        <a href="#" aria-label="Next">
+                            >
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+

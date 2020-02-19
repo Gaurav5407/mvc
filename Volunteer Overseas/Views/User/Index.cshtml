@@ -1,0 +1,506 @@
+﻿<link href="~/Content/Index.css?ts=<?=time()?>" rel="stylesheet" />
+<script src="~/Scripts/swiper.min.js"></script>
+<script src="~/Scripts/Validation.js"></script>
+<script src="~/Scripts/Index.js"></script>
+<script>
+    $(document).ready(function () {
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            observer: true,
+            observeParents: true
+
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+                swiper: galleryThumbs
+            },
+            observer: true,
+            observeParents: true
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="~/Scripts/dropkick.js"></script>
+<script src="~/Scripts/owl.carousel.min.js"></script>
+<body data-spy="scroll" data-target="#myscrollspy" data-offset="120">
+
+
+    <div class="container-fluid Banner">
+        <div class="Banner-header">Ghana Medical Volunteers</div>
+        <button name="view-photos" class="view-photos" data-toggle="modal" data-target="#gallery">
+            <img src="../images/photos-icon.png" height="20" width="20" />View Photos
+        </button>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center main">
+            <div class="col-lg-8 ">
+
+                <div class="banner-content">
+                    <div><h2>Ghana Medical Volunteers</h2></div>
+                    <div class="text-danger location"><img src="../Images/map.png" class="icon" />Khumasi, Ghana</div>
+
+                </div>
+
+                <div>
+                    <img class="play-logo border border-secondary" src="../Images/play-logo.png" /> <div class="d-inline-block "><h3>Plan My Gap Year</h3></div>
+                </div>
+
+
+                <div class="my-4 project-constraint">
+                    <div>
+                        <img src="../Images/icon1.png" class="icon" />From $714 from 2 weeks
+                    </div>
+                    <div>
+                        <img src="../Images/icon2.png" class="icon" />2-24 weeks
+                    </div>
+                    <div>
+                        <img src="../Images/icon4.png" class="icon" />18 and older
+                    </div>
+                </div>
+
+                <div class="sticky-header nav nav-pills" id="myscrollspy">
+                    <div class="nav-item forhover">
+                        <a href="#description" class="nav-link">DESCRIPTION</a>
+                    </div>
+                    <div class="nav-item forhover">
+                        <a href="#Location" class="nav-link">LOCATION</a>
+                    </div>
+                    <div class="nav-item forhover">
+                        <a href="#Cost" class="nav-link">COST</a>
+                    </div>
+                    <div class="nav-item forhover">
+                        <a class="nav-link" href="#date">DATES</a>
+                    </div>
+                    <div class="nav-item forhover">
+                        <a class="nav-link" href="#organization">ORGANIZATION</a>
+                    </div>
+                </div>
+
+
+                <div id="description">
+                    <h2>Description</h2>
+                    <div>
+                        <h4>OVERVIEW</h4>
+                        <p>
+                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        </p>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Feild Condition</h4>
+                        <p>
+                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        </p>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Your Impact</h4>
+                        <p>
+                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        </p>
+                        <p>
+                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        </p>
+                        <p>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        </p>
+                    </div>
+
+                    <video controls="controls" class="video">
+                        <source src="../Images/video.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <hr />
+                <div id="Location">
+                    <h2>Location</h2>
+                    <h4><img src="../Images/map.png" class="icon" />Khumasi, Ghana</h4>
+                    <!--<div style="width: 100%"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">find my location</a></iframe></div>-->
+                    <div id="map" style="width:100%;height:400px;"></div>
+                    <br />
+
+                </div>
+                <hr" />
+                <div id="Cost">
+                    <h2>Cost</h2>
+                    <p>The cost listed below includes a registration fee of $193.00 . The remainder or program fee is due 60 day proir to the start of your program</p>
+
+
+                    <div class="cost-div">
+                        <div class="cost-column1 col-lg-6">
+                            <div class="align-self-sm-center"><img src="../images/icon2.png" class="icon" /></div>
+                            <div class="align-self-center pr-md-3 green">Duration</div>
+                            <div class="cost-duration">
+                                <select class="duration1">
+                                    <option value="2">2 Weeks</option>
+                                    <option value="3">3 Weeks</option>
+                                    <option value="4">4 Weeks</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cost-column2 col-lg-6">
+                            <div class="align-self-sm-center">
+                                <img src="../images/icon1.png" class="icon" />
+                            </div>
+                            <div class="green align-self-center pr-md-5">Cost:</div>
+                            <div class="align-self-sm-center red">$714</div>
+                        </div>
+                    </div>
+
+
+                    <div class="row pt-5 m-1">
+                        <div class="col-md-6 included p-0">
+                            <div class="text-white include-header">What's Included</div>
+                            <div class="include-content">
+                                <div><img src="../images/new-tick.png" class="icon" />aasdfasdasdadadsadas <br /></div>
+                                <div>
+                                    <img src="../images/new-tick.png" class="icon" />aasdfasdasdadadsadas <br />
+                                </div>
+                                <div>
+                                    <img src="../images/new-tick.png" class="icon" />aasdfasdasdadadsadas <br />
+                                </div>
+                                <div>
+                                    <img src="../images/new-tick.png" class="icon" />aasdfasdasdadadsadas <br />
+                                </div>
+                                <div>
+                                    <img src="../images/new-tick.png" class="icon" />aasdfasdasdadadsadas <br />
+                                </div>
+                                <div>
+                                    <img src="../images/new-tick.png" class="icon" />aasdfasdasdadadsadas <br />
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+                        <div class=" col-md-6 not-included p-0">
+                            <div class="text-white not-include-header">What's not included</div>
+                            <div class="include-content">
+                                <div><img src="../images/non-check.png" class="icon" />aasdfasdasdadadsadas <br /></div>
+                                <div>
+                                    <img src="../images/non-check.png" class="icon" />aasdfasdasdadadsadas<br />
+                                </div>
+                                <div>
+                                    <img src="../images/non-check.png" class="icon" />aasdfasdasdadadsadas<br />
+                                </div>
+                                <div>
+                                    <img src="../images/non-check.png" class="icon" />aasdfasdasdadadsadas<br />
+                                </div>
+                                <div>
+                                    <img src="../images/non-check.png" class="icon" />aasdfasdasdadadsadas<br />
+                                </div>
+                                <div>
+                                    <img src="../images/non-check.png" class="icon" />aasdfasdasdadadsadas<br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <!--project start date-->
+                <div id="date">
+                    <h2>Project start date</h2>
+                    <p>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </p>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    </p>
+                    <!--table-->
+
+                    <div class="owl-carousel owl-theme" id="trending">
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="th">
+                                <div>January</div>
+                            </div>
+                            <div class="td">
+                                <div>02 sunday</div>
+                            </div>
+                            <div class="td">
+                                <div>03 sunday</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr />
+                <!--Organization-->
+                <div id="organization">
+                    <h2>Organization</h2>
+                    <p>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </p>
+                    <p>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </p>
+                    <p>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </p>
+                    <p>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </p>
+                    <p>
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="container bg-info text-white p-3" id="form">
+                    <div class="form-heading pl-2">23 people are reserching this project</div>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Project start date</label>
+                            <!--<input type="date" class="form-control start-date" name="date">-->
+                            <input type="text" class="datepicker form-control start-date" name="date" placeholder="mm/dd/yy" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Duration</label>
+                            <select class="form-control duration2">
+                                <option value="2">2 Weeks</option>
+                                <option value="3">3 Weeks</option>
+                                <option value="4">4 Weeks</option>
+                            </select>
+                        </div>
+                        <a class="nav-link btn btn-primary btn-block bg-danger" data-toggle="modal" data-target="#signup">Submit</a>
+                        <div class="text-white form-footer">Applying through Volunteer overseas gets you access to exclusive <a href="#" class="text-white">travel scholarships </a>and no fee <a href="#" class="text-white">fandraising platform</a></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="modal fade" id="signup">
+            <div class="modal-dialog">
+                <div class="modal-content container">
+                    <!-- header -->
+                    <div class="modal-header text-center">
+
+                        <h3 class="modal-title m-auto">Sign Up</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form" id="sigun-up" onsubmit="return validateSignUpForm()">
+                            <div class="form-group">
+                                <label for="Full Name">Full Name</label>
+                                <input type="text" class="form-control" required />
+
+                            </div>
+                            <div class="form-group">
+                                <label for="datepicker">Project start date</label>
+                                <input type="text" class="datepicker form-control start-date" name="date" placeholder="mm/dd/yy" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="Duration">Duration</label>
+                                <select class="form-control duration2">
+                                    <option value="">2 Weeks</option>
+                                    <option value="default">3 Weeks</option>
+                                    <option value="black">4 Weeks</option>
+                                    <option value="orange">5 Weeks</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneno">Phone</label>
+                                <input type="text" class="form-control" id="phoneno" />
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <!-- footer -->
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" form="sigun-up">Sign Up</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+
+    <div class="modal fade" id="gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="background-color: transparent; color:white;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb01.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb02.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb03.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb04.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb05.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb06.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb07.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb08.jpg)"></div>
+
+                        </div>
+
+
+                        <div class="swiper-button-next swiper-button-white"></div>
+                        <div class="swiper-button-prev swiper-button-white"></div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb01.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb02.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb03.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb04.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb05.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb06.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb07.jpg)"></div>
+                            <div class="swiper-slide" style="background-image:url(../Images/thumb08.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function initMap() {
+            var map = {
+                center: new google.maps.LatLng(23.035137, 72.500420),
+                zoom: 18
+            };
+            var uluru = new google.maps.Map(document.getElementById("map"), map);
+            var uluru1 = { lat: 23.035137, lng: 72.500420 };
+            var marker = new google.maps.Marker({ position: uluru1, map: map });
+            marker.setMap(uluru);
+           
+        }
+      
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZiYDHj6hnf4gf1oJVx24qWMdPvlxRsDQ&callback=initMap" async defer></script>
+
+</body>
+
+

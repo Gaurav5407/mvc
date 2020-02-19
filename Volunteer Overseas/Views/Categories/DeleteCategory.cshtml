@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+
+@model Volunteer_Overseas.Models.Category
+<main>
+    <div class="container with-box-shadow">
+
+        <form id="organization-detail " method="post">
+            @Html.AntiForgeryToken()
+            <div class="row text-center">
+                <div class="col-md-12" style="font-size:40px; padding-bottom:30px">
+                   Delete Organization
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label for="Organization Name" class="sub-header">Organization Name</label>
+                        @*@Html.TextBoxFor(m => m.category_name, new { @class = "form-control", placeholder = "Organization Name", required = "required", @id = "Organization Name" })*@
+                        @Html.EditorFor(m => m.category_name, new { htmlAttributes = new { @class = "form-control"} })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="text-center">
+                <button class="btn btn-fill" type="submit">Delete</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+

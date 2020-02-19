@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+@model IEnumerable<Volunteer_Overseas.Models.csp_getTypes_Result>
+<main>
+    <section class="admin-section">
+        <div class="container">
+            <div class="with-box-shadow ">
+                <div class="section-title text-center">
+                    <h5>Category list</h5>
+                    <div class="button-outer">
+                        <a class="btn btn-fill" href=@Url.Action("Add","Categories")>Add Category</a>
+                        @*<button type="button" class="btn btn-fill">Add Category</button>*@
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table admin-table table-bordered table-striped">
+                        <tr>
+                            <th>Category name</th>
+                            <th></th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                <td>
+                                    <div class="button-outer">
+                                        @Html.ActionLink("Edit", "EditCategory", new { id = item.Id }, new { @class = "btn btn-fill" })
+                                        @Html.ActionLink("Delete", "DeleteCategory", new { id = item.Id }, new { @class = "btn btn-fill" })
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                       
+                    </table>
+                </div>
+                <ul class="pagination">
+                    <li class="disabled">
+                        <a href="#" aria-label="Previous">
+                            <
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li class="">
+                        <a href="#" aria-label="Next">
+                            >
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+

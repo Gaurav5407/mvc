@@ -1,0 +1,114 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDetail.cshtml";
+}
+<link href="~/Content/Organization.css" rel="stylesheet" />
+<main>
+    <div class="container shadow">
+        <div class="stepwizard pt-4">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step">
+                    <a href="#step-1" class="btn btn-primary btn-circlec active">1</a>
+                    <p>Project detail</p>
+                </div>
+                <div class="stepwizard-step">
+                    <a href="#step-2" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                    <p>Project gallery</p>
+                </div>
+                <div class="stepwizard-step">
+                    <a href="#step-3" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                    <p>Project costs</p>
+                </div>
+                <div class="stepwizard-step">
+                    <a href="#step-3" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                    <p>Project Include</p>
+                </div>
+                <div class="stepwizard-step">
+                    <a href="#step-3" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                    <p>Project date</p>
+                </div>
+            </div>
+        </div>
+        <form id="project-detail" onsubmit="return validateProjectDetail()">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="organization" class="sub-header">Organization</label>
+
+                        <select class="custom-dropdown" id="organization">
+                            <option>abcd</option>
+                            <option>abcd</option>
+                            <option>abcd</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Category" class="sub-header">Category</label>
+
+                        <select class="custom-dropdown" id="Category">
+                            <option>abcd</option>
+                            <option>abcd</option>
+                            <option>abcd</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Activity" class="sub-header">Activity</label>
+
+                        <select class="custom-dropdown" id="Activity">
+                            <option>abcd</option>
+                            <option>abcd</option>
+                            <option>abcd</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="Title" class="sub-header">Title</label>
+                        <input type="text" class="form-control" id="Title" required />
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="min-age" class="sub-header">Minimum age</label>
+                        <input type="text" class="form-control" id="min-age" required />
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="max-age" class="sub-header">Maximum age</label>
+                        <input type="text" class="form-control" id="max-age" required />
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="form-group">
+                        <label for="Overview" class="sub-header">Overview description</label>
+
+                        <textarea rows="8" class="form-control" id="Overview"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-danger" form="project-detail">Submit</button>
+            </div>
+        </form>
+    </div>
+</main>

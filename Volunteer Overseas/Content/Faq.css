@@ -1,0 +1,101 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.Banner {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0)0%, rgba(0, 0, 0, 0.06) 10%, rgba(0, 0, 0, 0.15) 22%, rgba(0, 0, 0, 0.72) 75%, rgba(0, 0, 0, 0.84) 89%, rgba(0, 0, 0, 0.91) 100%),url('../images/faq-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+    max-width: 100%;
+}
+
+
+
+.Banner-header {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.accordian-header {
+    font-size: 26px;
+    color: #00acc1;
+    font-weight: bold;
+}
+
+.arrow-down {
+    width: 30px;
+    height: 30px;
+}
+
+
+.card-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+}
+
+.child {
+    height: inherit;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content {
+    font-size: 21px;
+    width: 90%;
+}
+
+.flip {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.accordion {
+    padding-top: 20px;
+}
+
+hr {
+    border-color: #ccc;
+}
+
+
+
+.main {
+    margin-bottom: 37px;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .Banner-header {
+        font-size: 35px;
+    }
+    
+}

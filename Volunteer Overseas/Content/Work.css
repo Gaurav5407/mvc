@@ -1,0 +1,318 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+/*Banner*/
+
+.Banner {
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0)0%, rgba(0, 0, 0, 0.06) 10%, rgba(0, 0, 0, 0.15) 22%, rgba(0, 0, 0, 0.72) 75%, rgba(0, 0, 0, 0.84) 89%, rgba(0, 0, 0, 0.91) 100%),url("../Images/banner2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 600px;
+    max-width: 100%;
+}
+
+
+
+
+hr {
+    border-color: #ccc;
+    margin-top: 8px;
+}
+
+
+
+
+.heading {
+    position: absolute;
+    width: 100%;
+    top: 66%;
+    right: 37px;
+}
+
+.header-content {
+    position: absolute;
+    display: flex;
+    top: 25%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-content-heading {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.header-content-description {
+    font-size: 33px;
+    color: #00acc1;
+}
+
+.header-button {
+    font-size: 43px;
+    color: white;
+    background-color: #e53b51;
+}
+
+.header-content .div1 {
+    width: 51%;
+}
+
+.main-header {
+    font-size: 54px;
+    text-align: center;
+    color: #00acc1;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    font-size: 74px;
+    background-color: red;
+    border-radius: 70px;
+}
+
+.section-header {
+    display: flex;
+}
+
+.section1-content-header {
+    width: 30%;
+}
+
+.section1-content div {
+    display: flex;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    position: relative;
+    margin-bottom: 7%;
+}
+
+.description {
+    font-size: 23px;
+    width: 60%;
+}
+
+.header {
+    font-size: 36px;
+    /*width: 49%;*/
+    color: #e53b51;
+    align-self: center;
+}
+
+.section-description {
+    display: flex;
+    margin-left: 100px;
+}
+
+.image {
+    width: 35%;
+    position: absolute;
+    top: 7%;
+    right: 0;
+}
+
+    .image img {
+        width: 50%;
+        float: right;
+    }
+
+video {
+    width: 100%;
+}
+/*apply now*/
+.inner-circle {
+    min-width: 40px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    background-color: #00acc1;
+    border-radius: 24px;
+}
+
+.section2-content {
+    margin-left: 4%;
+}
+
+.section2-footer {
+    font-size: 18px;
+    text-align: justify;
+}
+/*Wait stop hear a great news*/
+.footer-3 {
+    color: #00acc1;
+    font-weight: bold;
+}
+
+.begin-btn {
+    font-size: 36px;
+    border-radius: 20px;
+}
+
+
+@media (max-width: 575.98px) {
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        top: 25%;
+        justify-content: space-around;
+        align-items: center;
+        padding-right: 15px;
+    }
+
+    .banner-logo {
+        margin: 0;
+    }
+
+    .header-content .div1 {
+        width: 86%;
+    }
+
+    .header-content-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .header-content-description {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .header-button {
+        font-size: 26px;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .header-content .div2 {
+        width: 100%;
+    }
+
+    .main-header {
+        font-size: 23px;
+    }
+
+    .circle {
+        width: 45px;
+        height: 45px;
+        font-size: 35px;
+        margin-right: 10px;
+    }
+
+    .header {
+        font-size: 19px;
+    }
+
+    .section-description {
+        flex-direction: column-reverse;
+        margin-left: 0;
+    }
+
+    .image {
+        width: 35%;
+        position: unset;
+        top: unset;
+        right: unset;
+        margin-left: 0 !important;
+    }
+
+        .image img {
+            float: unset;
+            width: 300px;
+            float: unset;
+            height: 300px;
+        }
+
+    .description {
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .section1 {
+        margin-right: 6%;
+    }
+
+    /*apply now*/
+    .inner-circle {
+        min-width: 30px;
+        height: 30px;
+        font-size: 22px;
+    }
+
+    .section2-footer {
+        font-size: 12px;
+    }
+
+    .image4 {
+        width: 17px;
+        height: 17px;
+    }
+    
+
+    .begin-btn {
+        width: 100%;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width:576px) and (max-width: 991px) {
+    .header-content-heading {
+        font-size: 40px;
+    }
+
+    .header-content-description {
+        font-size: 23px;
+    }
+
+    .header-button {
+        font-size: 30px;
+    }
+
+    .image {
+        width: 34%;
+    }
+
+        .image img {
+            width: 100%;
+        }
+
+    .main-header {
+        font-size: 35px;
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+        font-size: 60px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .section-description {
+        margin-left: 80px;
+    }
+
+    .header {
+        font-size: 30px;
+    }
+
+    .section2-footer {
+        font-size: 12px;
+    }
+}

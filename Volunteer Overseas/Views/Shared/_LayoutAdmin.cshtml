@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="~/Images/favicon.ico" />
+    <link href="~/admin_panel/css/main.css" rel="stylesheet" />
+    <script src="~/Scripts/main.js"></script>
+</head>
+<body>
+    <div class="wrapper admin-wrapper admin-login">
+        <header>
+            <div class="row header-row">
+                <div class="col-lg-2 col-sm-3 col-xs-6 logo-outer">
+
+                    <a href="index.html" title="Volunteer Overseas" class="logo"><img src="../Images/logo_1.png" alt=""><img class="color-logo" src="../Images/logo.png" alt=""></a>
+                </div>
+                <div class="col-lg-10 col-sm-9 col-xs-6 menu-wrap">
+                    <nav>
+                        <ul>
+                            <li><a href="#" title="Organization">Organization</a></li>
+                            <li><a href="#" title="Projects">Projects</a></li>
+                            <li><a href="#" title="Application">Application</a></li>
+                            <li><a href="#" title="FAQ">FAQ</a></li>
+                            <li class="right-block">
+                                <a href=@Url.Action("login","Admin") class="btn" title="Login">Logout</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <a href="#" title="" class="hamburger-icon"><span></span></a>
+        </header>
+        @RenderBody()
+    </div>
+</body>
+</html>
